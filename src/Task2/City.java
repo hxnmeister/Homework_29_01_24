@@ -87,6 +87,11 @@ public class City {
     @Override
     public String toString() {
         return String.format(" City: %s\n Region: %s\n Country: %s\n Phone code: %02d\n Postcode: %s\n Population: %s\n",
-                getName(), getRegion(), getCountry(), getPhoneCode(), getPostcode(), getPopulation());
+                getName(),
+                getRegion(),
+                getCountry(),
+                getPhoneCode(),
+                getPostcode(),
+                getPopulation());
     }
 }

@@ -109,6 +109,11 @@ public class Country {
     @Override
     public String toString() {
         return String.format(" Country: %s\n Capital: %s\n Continent: %s\n Cities: %s\n Phone code: %s\n Population: %s\n",
-                getName(), getCapital(), getContinent(), String.join(", ", cities), getPhoneCode(), getPopulation());
+                getName(),
+                getCapital(),
+                getContinent(),
+                String.join(", ", cities),
+                getPhoneCode(),
+                getPopulation());
     }
 }

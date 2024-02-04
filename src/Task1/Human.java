@@ -127,11 +127,14 @@ public class Human {
     }
 
     public void fillBio() {
+        String patronymic;
         final String regExp = "^(\\+380|0)\\d{2}\\d{7}$";
 
         setFirstName(Helpers.getStringInputByLength("\n Enter firstname: ", 2));
         setLastName(Helpers.getStringInputByLength("\n Enter lastname: ", 2));
-        setPatronymic(Helpers.getStringInputByLength("\n Enter patronymic (enter \"0\" to skip): ", 1));
+
+        patronymic = Helpers.getStringInputByLength("\n Enter patronymic (enter \"0\" to skip): ", 1);
+        setPatronymic(patronymic.equals("0") ? null : patronymic);
 
         setBirthDate(getDateInput("\n Enter your birth date (yyyy-MM-dd): "));
 
@@ -143,6 +146,9 @@ public class Human {
     @Override
     public String toString() {
         return String.format("\n %s %s %s:\n  Birthday: %s\n  Phone number: %s\n  Home address:\n%s\n",
-                getLastName(), getFirstName(), getPatronymic().length() == 1 ? "" : getPatronymic(), new SimpleDateFormat("yyyy-MM-dd").format(getBirthDate()), getPhoneNumber(), getHomeAddress());
+                getLastName(),
+                getFirstName(),
+                getPatronymic() == null ? "" : getPatronymic(),
+                new SimpleDateFormat("yyyy-MM-dd").format(getBirthDate()), getPhoneNumber(), getHomeAddress());
     }
 }

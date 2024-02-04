@@ -76,7 +76,11 @@ public class HomeAddress {
 
     @Override
     public String toString() {
-        return String.format("   Country: %s\n   City: %s\n   Street: %s\n   House: %o\n   Apartment: %o\n",
-                getCountry(), getCity(), getStreet(), getHouse(), getApartment());
+        return String.format("   Country: %s\n   City: %s\n   Street: %s\n   House: %s\n   Apartment: %s\n",
+                getCountry(),
+                getCity(),
+                getStreet(),
+                getHouse(),
+                getApartment());
     }
 }

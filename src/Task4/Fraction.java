@@ -133,6 +133,8 @@ public class Fraction {
 
     @Override
     public String toString() {
-        return String.format(" %s/%s", getNumerator(), getDenominator());
+        return String.format(" %s/%s",
+                getNumerator(),
+                getDenominator());
     }
 }
